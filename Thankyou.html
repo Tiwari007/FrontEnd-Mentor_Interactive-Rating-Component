@@ -14,10 +14,7 @@
         <img src="./images/illustration-thank-you.svg" alt="" />
       </div>
       <div class="selectedStar">
-        You selected
-        <!-- Add rating here -->
-        4
-        out of 5
+        
       </div>
       <h1>Thank you!</h1>
       <p>
@@ -25,5 +22,10 @@
         more support, don't hesitate to get in touch!
       </p>
     </div>
+    <script>
+      const val = window.localStorage.getItem("rating");
+      document.querySelector(".selectedStar").innerText =`You selected ${val} out of 5`;
+      console.log("hello", window.localStorage.getItem("rating"))
+    </script>
   </body>
 </html>
